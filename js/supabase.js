@@ -20,8 +20,8 @@
  */
 
 // RELLENAR CON TUS CREDENCIALES DE SUPABASE:
-const SUPABASE_URL = '';     // https://xxxx.supabase.co
-const SUPABASE_ANON_KEY = ''; // eyJ...
+const SUPABASE_URL = 'https://omqepmgfrpndpquluwrf.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tcWVwbWdmcnBuZHBxdWx1d3JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyOTM0OTAsImV4cCI6MjA5Mjg2OTQ5MH0.84baW73o1UupBfnnMrN22vwb_6nw_skhHNplRqr9BAU';
 
 // ── Inicializar cliente ──────────────────────────────────────
 let _supabaseClient = null;
