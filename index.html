@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elcano 7 · Bilbao</title>
+  <meta name="description" content="Dos residencias exclusivas de lujo en el piso principal de Elcano 7, en el corazón de Bilbao, frente al Palacio Chavarri y Plaza Moyua. Reforma integral 2025.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVBAR
+     ══════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="logo">ELCANO 7</div>
+
+  <ul class="nav-links">
+    <li><a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a></li>
+    <li><a href="#viviendas" data-es="Viviendas" data-en="Residences">Viviendas</a></li>
+    <li><a href="#edificio" data-es="El Edificio" data-en="The Building">El Edificio</a></li>
+    <li><a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a></li>
+  </ul>
+
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <span>|</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <button class="hamburger" aria-label="Menu" aria-expanded="false">☰</button>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav-mobile">
+  <a href="#ubicacion" data-es="Ubicación" data-en="Location">Ubicación</a>
+  <a href="#viviendas" data-es="Viviendas" data-en="Residences">Viviendas</a>
+  <a href="#edificio" data-es="El Edificio" data-en="The Building">El Edificio</a>
+  <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+  <div class="lang-row">
+    <button class="lang-btn active" data-lang="es">ES</button>
+    <span>|</span>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+     ══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <img src="images/fachada.jpg" alt="Elcano 7 Bilbao — Fachada" class="hero-bg" loading="eager">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>ELCANO 7</h1>
+    <div class="hero-gold-line"></div>
+    <p class="hero-subtitle"
+       data-es="Dos residencias exclusivas en el corazón de Bilbao"
+       data-en="Two exclusive residences in the heart of Bilbao">
+      Dos residencias exclusivas en el corazón de Bilbao
+    </p>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-arrow">&#8964;</div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     INTRO
+     ══════════════════════════════════════════════════════════ -->
+<section id="intro">
+  <div class="intro-inner fade-in">
+    <span class="eyebrow" data-es="Bilbao · Piso Principal" data-en="Bilbao · Main Floor">Bilbao · Piso Principal</span>
+    <h2
+      data-es="Una oportunidad singular en uno de los edificios más emblemáticos de Bilbao"
+      data-en="A singular opportunity in one of Bilbao's most emblematic buildings">
+      Una oportunidad singular en uno de los edificios más emblemáticos de Bilbao
+    </h2>
+    <p
+      data-es="En el piso principal de uno de los edificios más singulares de Bilbao, frente a los jardines del Palacio Chavarri y a escasos metros de Plaza Moyua, se ofrecen dos residencias de lujo con reforma integral terminada en 2025. Techos altos, grandes ventanales, materiales de primera calidad y una ubicación que no tiene precio."
+      data-en="On the main floor of one of Bilbao's most distinguished buildings, overlooking the gardens of Palacio Chavarri and just steps from Plaza Moyua, two luxury residences are offered with a full renovation completed in 2025. High ceilings, large windows, top-quality materials, and a location that is truly priceless.">
+      En el piso principal de uno de los edificios más singulares de Bilbao, frente a los jardines del Palacio Chavarri y a escasos metros de Plaza Moyua, se ofrecen dos residencias de lujo con reforma integral terminada en 2025. Techos altos, grandes ventanales, materiales de primera calidad y una ubicación que no tiene precio.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     UBICACIÓN
+     ══════════════════════════════════════════════════════════ -->
+<section id="ubicacion">
+  <div class="container">
+    <div class="ubicacion-text fade-in">
+      <span class="section-eyebrow" data-es="Ubicación" data-en="Location">Ubicación</span>
+      <h2 class="section-title"
+          data-es="Una ubicación inigualable"
+          data-en="An unrivalled location">
+        Una ubicación inigualable
+      </h2>
+      <p class="section-text"
+         data-es="Calle Elcano 7 se sitúa en el centro neurálgico de Bilbao, en el distinguido barrio del Ensanche. A pocos pasos de Plaza Moyua, de los principales museos, restaurantes con estrella Michelin y del transporte público, esta es la dirección que define el lujo urbano en la capital vizcaína. Los residentes disfrutan de vistas directas a los jardines privados del Palacio Chavarri, un privilegio reservado a muy pocos."
+         data-en="Calle Elcano 7 is located in the nerve centre of Bilbao, in the distinguished Ensanche neighbourhood. A short walk from Plaza Moyua, the city's leading museums, Michelin-starred restaurants, and public transport, this is the address that defines urban luxury in the Basque capital. Residents enjoy direct views over the private gardens of Palacio Chavarri — a privilege reserved for very few.">
+        Calle Elcano 7 se sitúa en el centro neurálgico de Bilbao, en el distinguido barrio del Ensanche. A pocos pasos de Plaza Moyua, de los principales museos, restaurantes con estrella Michelin y del transporte público, esta es la dirección que define el lujo urbano en la capital vizcaína. Los residentes disfrutan de vistas directas a los jardines privados del Palacio Chavarri, un privilegio reservado a muy pocos.
+      </p>
+    </div>
+
+    <div class="ubicacion-img fade-in">
+      <img src="images/plaza-moyua.jpg" alt="Plaza Moyua · Bilbao" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     VIVIENDAS
+     ══════════════════════════════════════════════════════════ -->
+<section id="viviendas">
+  <div class="container">
+    <div class="viviendas-header fade-in">
+      <span class="section-eyebrow" data-es="Las Residencias" data-en="The Residences">Las Residencias</span>
+      <h2 class="section-title"
+          data-es="Dos viviendas únicas"
+          data-en="Two unique homes">
+        Dos viviendas únicas
+      </h2>
+      <p class="section-text"
+         data-es="Ambas residencias han sido reformadas íntegramente en 2025 con los más altos estándares de calidad, combinando la elegancia del edificio histórico con las comodidades del hogar contemporáneo."
+         data-en="Both residences have been completely renovated in 2025 to the highest quality standards, combining the elegance of the historic building with the comforts of contemporary living.">
+        Ambas residencias han sido reformadas íntegramente en 2025 con los más altos estándares de calidad, combinando la elegancia del edificio histórico con las comodidades del hogar contemporáneo.
+      </p>
+    </div>
+  </div>
+
+  <div class="viviendas-grid">
+
+    <!-- ── Residencia A ── -->
+    <div class="residencia fade-in" data-residencia="A">
+
+      <div class="galeria">
+        <div class="galeria-slide">
+          <span data-es="Salón · Residencia A" data-en="Living Room · Residence A">Salón · Residencia A</span>
+        </div>
+        <div class="galeria-slide">
+          <span data-es="Dormitorio Principal · Residencia A" data-en="Master Bedroom · Residence A">Dormitorio Principal · Residencia A</span>
+        </div>
+        <div class="galeria-slide">
+          <span data-es="Cocina · Residencia A" data-en="Kitchen · Residence A">Cocina · Residencia A</span>
+        </div>
+        <div class="galeria-slide">
+          <span data-es="Baño Principal · Residencia A" data-en="Main Bathroom · Residence A">Baño Principal · Residencia A</span>
+        </div>
+
+        <button class="galeria-btn galeria-prev" aria-label="Anterior">&#8249;</button>
+        <button class="galeria-btn galeria-next" aria-label="Siguiente">&#8250;</button>
+
+        <div class="galeria-dots">
+          <div class="galeria-dot" aria-label="Foto 1"></div>
+          <div class="galeria-dot" aria-label="Foto 2"></div>
+          <div class="galeria-dot" aria-label="Foto 3"></div>
+          <div class="galeria-dot" aria-label="Foto 4"></div>
+        </div>
+      </div>
+
+      <div class="residencia-info">
+        <p class="residencia-badge" data-es="Piso Principal" data-en="Main Floor">Piso Principal</p>
+        <h3 data-es="Residencia A — 120 m²" data-en="Residence A — 120 m²">Residencia A — 120 m²</h3>
+
+        <ul class="caracteristicas">
+          <li data-es="120 m² construidos, piso principal" data-en="120 m² built area, main floor">120 m² construidos, piso principal</li>
+          <li data-es="2 dormitorios" data-en="2 bedrooms">2 dormitorios</li>
+          <li data-es="2 baños completos (1 en suite)" data-en="2 full bathrooms (1 en suite)">2 baños completos (1 en suite)</li>
+          <li data-es="Salón con chimenea" data-en="Living room with fireplace">Salón con chimenea</li>
+          <li data-es="Cocina independiente de gran tamaño" data-en="Large independent kitchen">Cocina independiente de gran tamaño</li>
+          <li data-es="Armarios empotrados en dormitorios" data-en="Built-in wardrobes">Armarios empotrados en dormitorios</li>
+          <li data-es="Orientación suroeste" data-en="Southwest orientation">Orientación suroeste</li>
+          <li data-es="Vistas a jardines del Palacio Chavarri" data-en="Views over Palacio Chavarri gardens">Vistas a jardines del Palacio Chavarri</li>
+          <li data-es="Reforma integral 2025" data-en="Full renovation 2025">Reforma integral 2025</li>
+          <li data-es="Ventanas Climalit de doble acristalamiento" data-en="Climalit double-glazed windows">Ventanas Climalit de doble acristalamiento</li>
+          <li data-es="Aire acondicionado y calefacción individual" data-en="Individual air conditioning and heating">Aire acondicionado y calefacción individual</li>
+        </ul>
+
+        <button class="btn-cta" data-residencia="A"
+                data-es="Solicitar información"
+                data-en="Request information">
+          Solicitar información
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Residencia B ── -->
+    <div class="residencia fade-in" data-residencia="B">
+
+      <div class="galeria">
+        <div class="galeria-slide">
+          <span data-es="Gran Salón · Residencia B" data-en="Grand Living Room · Residence B">Gran Salón · Residencia B</span>
+        </div>
+        <div class="galeria-slide">
+          <span data-es="Suite Principal · Residencia B" data-en="Master Suite · Residence B">Suite Principal · Residencia B</span>
+        </div>
+        <div class="galeria-slide">
+          <span data-es="Cocina Americana · Residencia B" data-en="Open Kitchen · Residence B">Cocina Americana · Residencia B</span>
+        </div>
+        <div class="galeria-slide">
+          <span data-es="Vestidor · Residencia B" data-en="Walk-in Wardrobe · Residence B">Vestidor · Residencia B</span>
+        </div>
+
+        <button class="galeria-btn galeria-prev" aria-label="Anterior">&#8249;</button>
+        <button class="galeria-btn galeria-next" aria-label="Siguiente">&#8250;</button>
+
+        <div class="galeria-dots">
+          <div class="galeria-dot" aria-label="Foto 1"></div>
+          <div class="galeria-dot" aria-label="Foto 2"></div>
+          <div class="galeria-dot" aria-label="Foto 3"></div>
+          <div class="galeria-dot" aria-label="Foto 4"></div>
+        </div>
+      </div>
+
+      <div class="residencia-info">
+        <p class="residencia-badge" data-es="Piso Principal" data-en="Main Floor">Piso Principal</p>
+        <h3 data-es="Residencia B — 170 m²" data-en="Residence B — 170 m²">Residencia B — 170 m²</h3>
+
+        <ul class="caracteristicas">
+          <li data-es="170 m² construidos, piso principal" data-en="170 m² built area, main floor">170 m² construidos, piso principal</li>
+          <li data-es="3 dormitorios" data-en="3 bedrooms">3 dormitorios</li>
+          <li data-es="3 baños completos (2 en suite)" data-en="3 full bathrooms (2 en suite)">3 baños completos (2 en suite)</li>
+          <li data-es="Gran salón con cocina americana" data-en="Grand living room with open kitchen">Gran salón con cocina americana</li>
+          <li data-es="Suite principal con vestidor propio" data-en="Master suite with private walk-in wardrobe">Suite principal con vestidor propio</li>
+          <li data-es="Armarios empotrados en todos los dormitorios" data-en="Built-in wardrobes in all bedrooms">Armarios empotrados en todos los dormitorios</li>
+          <li data-es="Trastero incluido" data-en="Storage room included">Trastero incluido</li>
+          <li data-es="Orientación suroeste" data-en="Southwest orientation">Orientación suroeste</li>
+          <li data-es="Vistas a jardines del Palacio Chavarri" data-en="Views over Palacio Chavarri gardens">Vistas a jardines del Palacio Chavarri</li>
+          <li data-es="Reforma integral 2025" data-en="Full renovation 2025">Reforma integral 2025</li>
+          <li data-es="Ventanas Climalit de doble acristalamiento" data-en="Climalit double-glazed windows">Ventanas Climalit de doble acristalamiento</li>
+          <li data-es="Aire acondicionado y calefacción individual" data-en="Individual air conditioning and heating">Aire acondicionado y calefacción individual</li>
+        </ul>
+
+        <button class="btn-cta" data-residencia="B"
+                data-es="Solicitar información"
+                data-en="Request information">
+          Solicitar información
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /.viviendas-grid -->
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     EDIFICIO
+     ══════════════════════════════════════════════════════════ -->
+<section id="edificio">
+  <div class="container">
+    <div class="edificio-img fade-in">
+      <img src="images/portal-1.jpg" alt="Portal · Elcano 7 Bilbao" loading="lazy">
+    </div>
+
+    <div class="edificio-text fade-in">
+      <span class="section-eyebrow" data-es="El Edificio" data-en="The Building">El Edificio</span>
+      <h2 class="section-title"
+          data-es="Arquitectura e historia"
+          data-en="Architecture and history">
+        Arquitectura e historia
+      </h2>
+      <p class="section-text"
+         data-es="El edificio de Calle Elcano 7 es uno de los inmuebles más distinguidos del Ensanche de Bilbao. Su arquitectura clásica, sus zonas comunes cuidadas y su ubicación privilegiada frente al Palacio Chavarri lo convierten en un referente de elegancia en la ciudad. El portal, los ascensores y los espacios comunes han sido renovados manteniendo el carácter original del inmueble."
+         data-en="The building at Calle Elcano 7 is one of the most distinguished properties in Bilbao's Ensanche district. Its classical architecture, well-maintained common areas, and privileged position facing Palacio Chavarri make it a benchmark of elegance in the city. The entrance hall, lifts, and communal spaces have been renovated while preserving the building's original character.">
+        El edificio de Calle Elcano 7 es uno de los inmuebles más distinguidos del Ensanche de Bilbao. Su arquitectura clásica, sus zonas comunes cuidadas y su ubicación privilegiada frente al Palacio Chavarri lo convierten en un referente de elegancia en la ciudad. El portal, los ascensores y los espacios comunes han sido renovados manteniendo el carácter original del inmueble.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACTO / FORMULARIO
+     ══════════════════════════════════════════════════════════ -->
+<section id="contacto">
+  <div class="form-header fade-in">
+    <span class="section-eyebrow" data-es="Contacto" data-en="Contact">Contacto</span>
+    <h2 class="section-title"
+        data-es="Solicita información"
+        data-en="Request information">
+      Solicita información
+    </h2>
+    <p class="section-text"
+       style="max-width:100%; margin:0 auto;"
+       data-es="Nos pondremos en contacto contigo en menos de 24 horas para resolver todas tus dudas."
+       data-en="We will contact you within 24 hours to answer all your questions.">
+      Nos pondremos en contacto contigo en menos de 24 horas para resolver todas tus dudas.
+    </p>
+  </div>
+
+  <form id="contact-form" novalidate>
+
+    <div class="form-group">
+      <label for="nombre" data-es="Nombre completo" data-en="Full name">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" autocomplete="name"
+             data-placeholder-es="Tu nombre" data-placeholder-en="Your name"
+             placeholder="Tu nombre">
+      <span class="form-error" role="alert"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="email" data-es="Correo electrónico" data-en="Email address">Correo electrónico</label>
+      <input type="email" id="email" name="email" autocomplete="email"
+             data-placeholder-es="tu@email.com" data-placeholder-en="you@email.com"
+             placeholder="tu@email.com">
+      <span class="form-error" role="alert"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="telefono" data-es="Teléfono" data-en="Phone number">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+             data-placeholder-es="+34 600 000 000" data-placeholder-en="+34 600 000 000"
+             placeholder="+34 600 000 000">
+      <span class="form-error" role="alert"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="vivienda" data-es="Vivienda de interés" data-en="Residence of interest">Vivienda de interés</label>
+      <select id="vivienda" name="vivienda">
+        <option value="" data-es="Selecciona una vivienda" data-en="Select a residence">Selecciona una vivienda</option>
+        <option value="Residencia A - 120 m²" data-es="Residencia A — 120 m²" data-en="Residence A — 120 m²">Residencia A — 120 m²</option>
+        <option value="Residencia B - 170 m²" data-es="Residencia B — 170 m²" data-en="Residence B — 170 m²">Residencia B — 170 m²</option>
+        <option value="Ambas viviendas" data-es="Ambas viviendas" data-en="Both residences">Ambas viviendas</option>
+      </select>
+      <span class="form-error" role="alert"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje" data-es="Mensaje (opcional)" data-en="Message (optional)">Mensaje (opcional)</label>
+      <textarea id="mensaje" name="mensaje" rows="4"
+                data-placeholder-es="¿Hay algo que quieras preguntarnos?"
+                data-placeholder-en="Is there anything you would like to ask us?"
+                placeholder="¿Hay algo que quieras preguntarnos?"></textarea>
+      <span class="form-error" role="alert"></span>
+    </div>
+
+    <div class="checkbox-group">
+      <input type="checkbox" name="privacidad" id="privacidad">
+      <label for="privacidad">
+        <span data-es="Acepto la " data-en="I accept the ">Acepto la </span><a href="privacy.html" target="_blank" data-es="política de privacidad" data-en="privacy policy">política de privacidad</a>
+      </label>
+      <span class="form-error" role="alert"></span>
+    </div>
+
+    <button type="submit" class="btn-submit"
+            data-es="Enviar solicitud"
+            data-en="Send request">
+      Enviar solicitud
+    </button>
+
+    <div id="form-success" class="hidden">
+      <p data-es="Gracias. Nos pondremos en contacto contigo en menos de 24 horas."
+         data-en="Thank you. We will contact you within 24 hours.">
+        Gracias. Nos pondremos en contacto contigo en menos de 24 horas.
+      </p>
+    </div>
+
+  </form>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">ELCANO 7</div>
+  <div class="footer-divider"></div>
+  <p>&copy; 2025 Elcano 7 · Bilbao</p>
+  <a href="privacy.html" data-es="Política de privacidad" data-en="Privacy policy">Política de privacidad</a>
+</footer>
+
+<!-- Scripts -->
+<script src="js/supabase.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
