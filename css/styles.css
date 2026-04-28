@@ -307,7 +307,10 @@ nav.scrolled {
   padding: 6px 16px;
   margin-bottom: 28px;
   font-family: var(--font-sans);
-  font-weight: 400;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .hero-content h1 {
