@@ -705,6 +705,27 @@ section {
   transform: scale(1.03);
 }
 
+.edificio-galeria {
+  position: relative;
+  overflow: hidden;
+}
+
+.edificio-slide {
+  display: none;
+}
+
+.edificio-slide.active {
+  display: block;
+}
+
+.edificio-galeria .galeria-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
 #edificio .edificio-img::after {
   content: '';
   position: absolute;

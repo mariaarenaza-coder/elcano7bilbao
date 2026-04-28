@@ -165,6 +165,33 @@ function initGalerias() {
   });
 }
 
+// ── Carrusel edificio ────────────────────────────────────────
+
+function initEdificioGaleria() {
+  const galeria = document.querySelector('.edificio-galeria');
+  if (!galeria) return;
+
+  const slides = galeria.querySelectorAll('.edificio-slide');
+  const dots   = galeria.querySelectorAll('.galeria-dot');
+  const prev   = galeria.querySelector('.galeria-prev');
+  const next   = galeria.querySelector('.galeria-next');
+  let current  = 0;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  if (prev) prev.addEventListener('click', () => goTo(current - 1));
+  if (next) next.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  if (dots.length) dots[0].classList.add('active');
+}
+
 // ── Preselección de vivienda ──────────────────────────────────
 
 function initCtaButtons() {
@@ -393,6 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initScrollEffects();
   initGalerias();
+  initEdificioGaleria();
   initCtaButtons();
   initForm();
   initFadeIn();
