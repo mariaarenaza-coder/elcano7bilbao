@@ -36,7 +36,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -432,9 +432,9 @@ section {
 }
 
 .section-text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--secondary);
-  line-height: 1.85;
+  line-height: 1.9;
   max-width: 520px;
 }
 
@@ -647,9 +647,9 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .caracteristicas li::before {
@@ -788,7 +788,7 @@ section {
   border-bottom: 1px solid var(--border);
   padding: 10px 0 10px;
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text);
   outline: none;
   transition: border-color var(--transition);
