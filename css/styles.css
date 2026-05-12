@@ -26,6 +26,7 @@
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Inter', system-ui, sans-serif;
+  --font-brand: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   --nav-h: 72px;
   --max-w: 1200px;
@@ -119,9 +120,9 @@ nav.scrolled {
 }
 
 .logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-brand);
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: 0.18em;
   color: var(--text);
   flex-shrink: 0;
@@ -129,10 +130,6 @@ nav.scrolled {
 }
 .logo-7 {
   color: var(--gold);
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1em;
-  font-weight: 700;
-  vertical-align: text-top;
 }
 
 .nav-links {
@@ -322,9 +319,9 @@ nav.scrolled {
 }
 
 .hero-content h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-brand);
   font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: 0.25em;
   line-height: 1;
   margin-bottom: 20px;
@@ -960,9 +957,9 @@ footer {
 }
 
 .footer-logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-brand);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: 0.2em;
   color: #fff;
   margin-bottom: 12px;
