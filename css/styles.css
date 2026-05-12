@@ -130,6 +130,7 @@ nav.scrolled {
 }
 .logo-7 {
   color: var(--gold);
+  vertical-align: text-top;
 }
 
 .nav-links {
