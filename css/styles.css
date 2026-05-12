@@ -126,6 +126,14 @@ nav.scrolled {
   color: var(--text);
   flex-shrink: 0;
 }
+.logo sup,
+.footer-logo sup,
+.hero-content h1 sup {
+  font-size: 0.55em;
+  vertical-align: super;
+  letter-spacing: 0;
+  font-weight: 700;
+}
 
 .nav-links {
   display: flex;
@@ -757,6 +765,17 @@ section {
   margin: 0 auto 56px;
 }
 
+.contact-phone {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-decoration: none;
+}
+.contact-phone:hover { opacity: 0.8; }
+
 #contact-form {
   max-width: var(--max-w-form);
   margin: 0 auto;
@@ -954,6 +973,17 @@ footer {
   background: var(--gold);
   margin: 16px auto;
 }
+
+.footer-phone {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+.footer-phone:hover { color: #fff; }
 
 footer p {
   font-size: 0.75rem;
