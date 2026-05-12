@@ -126,13 +126,8 @@ nav.scrolled {
   color: var(--text);
   flex-shrink: 0;
 }
-.logo sup,
-.footer-logo sup,
-.hero-content h1 sup {
-  font-size: 0.7em;
-  vertical-align: top;
-  letter-spacing: 0;
-  font-weight: 700;
+.logo-7 {
+  color: var(--gold);
 }
 
 .nav-links {
