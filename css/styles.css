@@ -131,7 +131,7 @@ nav.scrolled {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1em;
   font-weight: 700;
-  vertical-align: baseline;
+  vertical-align: top;
 }
 
 .nav-links {
