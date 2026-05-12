@@ -128,12 +128,10 @@ nav.scrolled {
 }
 .logo-7 {
   color: var(--gold);
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  letter-spacing: inherit;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1em;
+  font-weight: 700;
   vertical-align: baseline;
-  line-height: inherit;
 }
 
 .nav-links {
@@ -329,6 +327,7 @@ nav.scrolled {
   letter-spacing: 0.25em;
   line-height: 1;
   margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 .hero-content .hero-subtitle {
