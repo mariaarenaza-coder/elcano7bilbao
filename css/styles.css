@@ -129,8 +129,8 @@ nav.scrolled {
 .logo sup,
 .footer-logo sup,
 .hero-content h1 sup {
-  font-size: 0.55em;
-  vertical-align: super;
+  font-size: 0.7em;
+  vertical-align: top;
   letter-spacing: 0;
   font-weight: 700;
 }
