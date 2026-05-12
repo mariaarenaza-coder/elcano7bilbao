@@ -125,6 +125,7 @@ nav.scrolled {
   letter-spacing: 0.18em;
   color: var(--text);
   flex-shrink: 0;
+  line-height: 1;
 }
 .logo-7 {
   color: var(--gold);
@@ -965,6 +966,7 @@ footer {
   letter-spacing: 0.2em;
   color: #fff;
   margin-bottom: 12px;
+  line-height: 1;
 }
 
 .footer-divider {
