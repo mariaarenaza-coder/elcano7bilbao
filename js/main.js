@@ -307,7 +307,7 @@ function validateForm(form) {
 // ── WhatsApp ──────────────────────────────────────────────────
 
 function openWhatsApp(nombre, vivienda, lang) {
-  const phone = '34600600600';
+  const phone = '34690954043';
   let text;
 
   if (lang === 'en') {
@@ -362,9 +362,6 @@ function initForm() {
         // Error de Supabase — mostrar pero no bloquear el flujo principal
         console.warn('No se guardó en base de datos:', result.error);
       }
-
-      // Abrir WhatsApp
-      openWhatsApp(nombre, vivienda, lang);
 
       // Mostrar mensaje de éxito
       if (successMsg) {
