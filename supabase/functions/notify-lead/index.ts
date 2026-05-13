@@ -11,8 +11,8 @@ const copy = {
   es: {
     subject:  (nombre: string) => `Hola ${nombre}, hemos recibido tu solicitud — Elcano 7 Bilbao`,
     greeting: (nombre: string) => `Hola ${nombre},`,
-    body: `Gracias por tu interés en <strong>Elcano 7 Bilbao</strong>. Hemos recibido tu solicitud y nos pondremos en contacto contigo a la mayor brevedad posible para agendar una visita.`,
-    footer: `Si necesitas resolver cualquier duda con urgencia, puedes escribirnos por WhatsApp o llamarnos directamente:`,
+    body: `Gracias por su interés en <strong>Elcano 7 Bilbao</strong>. Hemos recibido su solicitud y nos pondremos en contacto con usted a la mayor brevedad posible para agendar una visita.`,
+    footer: `Si necesita resolver cualquier duda con urgencia, puede escribirnos por WhatsApp o llamarnos directamente:`,
     closing: 'Un cordial saludo,',
     name: 'María Arenaza',
   },
