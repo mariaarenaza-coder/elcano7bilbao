@@ -419,11 +419,8 @@ function initFadeIn() {
 // ── Tracking contacto ─────────────────────────────────────────
 
 function initContactTracking() {
-  document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]').forEach(el => {
-    el.addEventListener('click', () => {
-      const type = el.href.startsWith('tel:') ? 'phone_click' : 'whatsapp_click';
-      track(type, {});
-    });
+  document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+    el.addEventListener('click', () => track('phone_click', {}));
   });
 }
 
