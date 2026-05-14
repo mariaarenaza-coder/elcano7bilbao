@@ -194,10 +194,15 @@ function initEdificioGaleria() {
 
 // ── Preselección de vivienda ──────────────────────────────────
 
+function track(event, props) {
+  if (typeof window.va === 'function') window.va('event', { name: event, ...props });
+}
+
 function initCtaButtons() {
   document.querySelectorAll('.btn-cta').forEach(btn => {
     btn.addEventListener('click', () => {
       const residenciaKey = btn.dataset.residencia; // 'A' o 'B'
+      track('cta_click', { residencia: residenciaKey });
       const select = document.querySelector('#contact-form select[name="vivienda"]');
 
       if (select) {
@@ -363,6 +368,8 @@ function initForm() {
         console.warn('No se guardó en base de datos:', result.error);
       }
 
+      track('form_submit', { vivienda, idioma: lang });
+
       // Mostrar mensaje de éxito
       if (successMsg) {
         successMsg.classList.remove('hidden');
@@ -409,6 +416,17 @@ function initFadeIn() {
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 }
 
+// ── Tracking contacto ─────────────────────────────────────────
+
+function initContactTracking() {
+  document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"]').forEach(el => {
+    el.addEventListener('click', () => {
+      const type = el.href.startsWith('tel:') ? 'phone_click' : 'whatsapp_click';
+      track(type, {});
+    });
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -420,5 +438,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEdificioGaleria();
   initCtaButtons();
   initForm();
+  initContactTracking();
   initFadeIn();
 });
