@@ -196,6 +196,7 @@ function initEdificioGaleria() {
 
 function track(event, props) {
   if (typeof window.va === 'function') window.va('event', { name: event, ...props });
+  if (typeof window.gtag === 'function') window.gtag('event', event, props);
 }
 
 function initCtaButtons() {
@@ -369,6 +370,7 @@ function initForm() {
       }
 
       track('form_submit', { vivienda, idioma: lang });
+      track('generate_lead', { vivienda, idioma: lang });
 
       // Mostrar mensaje de éxito
       if (successMsg) {
