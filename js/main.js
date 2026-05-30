@@ -356,6 +356,9 @@ function initForm() {
     const vivienda = form.querySelector('[name="vivienda"]').value.trim();
     const mensaje  = form.querySelector('[name="mensaje"]').value.trim();
 
+    track('form_submit', { vivienda, idioma: lang });
+    track('generate_lead', { vivienda, idioma: lang });
+
     // Deshabilitar botón mientras se envía
     submitBtn.disabled = true;
     const originalText = submitBtn.textContent;
@@ -368,9 +371,6 @@ function initForm() {
         // Error de Supabase — mostrar pero no bloquear el flujo principal
         console.warn('No se guardó en base de datos:', result.error);
       }
-
-      track('form_submit', { vivienda, idioma: lang });
-      track('generate_lead', { vivienda, idioma: lang });
 
       // Mostrar mensaje de éxito
       if (successMsg) {
