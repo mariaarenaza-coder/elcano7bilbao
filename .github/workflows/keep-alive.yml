@@ -1,0 +1,18 @@
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    - cron: '0 8 */5 * *'  # cada 5 días a las 8:00 UTC
+  workflow_dispatch:        # permite lanzarlo manualmente
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            "https://omqepmgfrpndpquluwrf.supabase.co/rest/v1/" \
+            -H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9tcWVwbWdmcnBuZHBxdWx1d3JmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyOTM0OTAsImV4cCI6MjA5Mjg2OTQ5MH0.84baW73o1UupBfnnMrN22vwb_6nw_skhHNplRqr9BAU")
+          echo "Supabase response: $STATUS"
+          [ "$STATUS" = "200" ] || exit 1
