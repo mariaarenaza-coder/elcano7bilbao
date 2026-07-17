@@ -655,6 +655,14 @@ section {
   margin-bottom: 20px;
 }
 
+.superficie-nota {
+  font-size: 0.72rem;
+  color: var(--secondary);
+  margin-top: 12px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
 /* Tour virtual Matterport */
 .tour-virtual {
   border-top: 1px solid var(--border);
