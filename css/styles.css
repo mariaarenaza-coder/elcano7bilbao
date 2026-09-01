@@ -563,7 +563,7 @@ section {
   inset: 0;
 }
 
-.staging-badge {
+.galeria-slide .staging-badge {
   position: absolute;
   bottom: 12px;
   left: 12px;
@@ -581,7 +581,7 @@ section {
 }
 
 @media (max-width: 600px) {
-  .staging-badge {
+  .galeria-slide .staging-badge {
     font-size: 0.55rem;
     padding: 3px 7px;
     bottom: 8px;
@@ -618,7 +618,7 @@ section {
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding: 0 0 12px;
+  padding: 0 16px 12px 16px;
   flex-wrap: wrap;
 }
 
