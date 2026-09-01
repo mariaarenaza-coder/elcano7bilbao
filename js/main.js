@@ -426,6 +426,32 @@ function initContactTracking() {
   });
 }
 
+// ── Antes / Después ───────────────────────────────────────────
+
+function initAntesDespues() {
+  document.querySelectorAll('.antes-despues').forEach(el => {
+    const track = el.querySelector('.ad-track');
+    const after = el.querySelector('.ad-after');
+    const handle = el.querySelector('.ad-handle');
+    let dragging = false;
+
+    function setPosition(clientX) {
+      const rect = track.getBoundingClientRect();
+      const pct = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 2), 98);
+      after.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+      handle.style.left = pct + '%';
+    }
+
+    track.addEventListener('mousedown', e => { dragging = true; setPosition(e.clientX); });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    window.addEventListener('mousemove', e => { if (dragging) setPosition(e.clientX); });
+
+    track.addEventListener('touchstart', e => { dragging = true; setPosition(e.touches[0].clientX); }, { passive: true });
+    window.addEventListener('touchend', () => { dragging = false; });
+    track.addEventListener('touchmove', e => { if (dragging) setPosition(e.touches[0].clientX); }, { passive: true });
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────────
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -435,6 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initGalerias();
   initEdificioGaleria();
+  initAntesDespues();
   initCtaButtons();
   initForm();
   initContactTracking();
