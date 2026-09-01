@@ -558,6 +558,28 @@ section {
   font-style: italic;
 }
 
+.galeria-slide--staging {
+  position: absolute;
+  inset: 0;
+}
+
+.staging-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(0, 0, 0, 0.52);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .galeria-slide--plano {
   background: #fff;
   padding: 0;
