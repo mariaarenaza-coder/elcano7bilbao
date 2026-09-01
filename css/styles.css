@@ -565,19 +565,28 @@ section {
 
 .staging-badge {
   position: absolute;
-  bottom: 14px;
-  left: 14px;
-  background: rgba(0, 0, 0, 0.52);
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.48);
   color: #fff;
   font-family: var(--font-sans);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-style: normal;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  padding: 5px 10px;
+  padding: 4px 9px;
   border-radius: 2px;
   pointer-events: none;
   z-index: 2;
+}
+
+@media (max-width: 600px) {
+  .staging-badge {
+    font-size: 0.55rem;
+    padding: 3px 7px;
+    bottom: 8px;
+    left: 8px;
+  }
 }
 
 .galeria-slide--plano {
@@ -601,6 +610,57 @@ section {
 
 .antes-despues {
   width: 100%;
+}
+
+.ad-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 0 10px;
+  flex-wrap: wrap;
+}
+
+.ad-residencia-label {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.ad-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.ad-tab {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border: 1px solid var(--border, #d8d4cc);
+  background: transparent;
+  color: var(--secondary);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ad-tab.active,
+.ad-tab:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.ad-panel {
+  display: none;
+}
+
+.ad-panel.active {
+  display: block;
 }
 
 .ad-track {
