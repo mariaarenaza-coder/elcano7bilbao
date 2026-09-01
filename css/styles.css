@@ -610,14 +610,15 @@ section {
 
 .antes-despues {
   width: 100%;
+  padding-top: 20px;
 }
 
 .ad-header {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding: 0 0 10px;
+  padding: 0 0 12px;
   flex-wrap: wrap;
 }
 
@@ -626,12 +627,12 @@ section {
   font-size: 0.8rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary);
+  color: var(--text);
 }
 
 .ad-tabs {
   display: flex;
-  gap: 4px;
+  gap: 0;
 }
 
 .ad-tab {
@@ -639,20 +640,23 @@ section {
   font-size: 0.62rem;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 5px 10px;
-  border: 1px solid var(--border, #d8d4cc);
+  padding: 5px 12px;
+  border: none;
+  border-bottom: 2px solid transparent;
   background: transparent;
   color: var(--secondary);
   cursor: pointer;
-  border-radius: 2px;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  border-radius: 0;
+  transition: color 0.2s, border-color 0.2s;
 }
 
-.ad-tab.active,
+.ad-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--text);
+}
+
 .ad-tab:hover {
-  background: var(--primary);
-  color: #fff;
-  border-color: var(--primary);
+  color: var(--text);
 }
 
 .ad-panel {
