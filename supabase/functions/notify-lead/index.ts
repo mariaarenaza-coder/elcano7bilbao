@@ -9,18 +9,20 @@ const WA_DISPLAY = '+34 690 954 043'
 
 const copy = {
   es: {
-    subject:  (nombre: string) => `Hola ${nombre}, hemos recibido tu solicitud — Elcano 7 Bilbao`,
-    greeting: (nombre: string) => `Hola ${nombre},`,
-    body: `Gracias por su interés en <strong>Elcano 7 Bilbao</strong>. Hemos recibido su solicitud y nos pondremos en contacto con usted a la mayor brevedad posible para agendar una visita.`,
-    footer: `Si necesita resolver cualquier duda con urgencia, puede escribirnos por WhatsApp o llamarnos directamente:`,
+    subject:  () => `Su solicitud de visita — Elcano 7, Bilbao`,
+    greeting: (nombre: string) => `Estimado/a ${nombre},`,
+    body: `Gracias por su interés en <strong>Elcano 7</strong>. Hemos recibido su solicitud y nos pondremos en contacto con usted en las próximas 24 horas para confirmar su visita privada.`,
+    body2: `Las visitas comienzan la primera semana de junio.`,
+    footer: `Si necesita resolver cualquier duda, puede escribirnos por WhatsApp o llamarnos directamente:`,
     closing: 'Un cordial saludo,',
     name: 'María Arenaza',
   },
   en: {
-    subject:  (nombre: string) => `Hello ${nombre}, we have received your enquiry — Elcano 7 Bilbao`,
-    greeting: (nombre: string) => `Hello ${nombre},`,
-    body: `Thank you for your interest in <strong>Elcano 7 Bilbao</strong>. We have received your enquiry and will be in touch as soon as possible to arrange a viewing.`,
-    footer: `If you need to reach us urgently, you can message us on WhatsApp or call us directly:`,
+    subject:  () => `Your visit request — Elcano 7, Bilbao`,
+    greeting: (nombre: string) => `Dear ${nombre},`,
+    body: `Thank you for your interest in <strong>Elcano 7</strong>. We have received your request and will be in touch within 24 hours to confirm your private viewing.`,
+    body2: `Visits begin in the first week of June.`,
+    footer: `Should you have any questions in the meantime, please do not hesitate to contact us via WhatsApp or by phone:`,
     closing: 'Kind regards,',
     name: 'María Arenaza',
   },
@@ -67,7 +69,7 @@ function buildLeadHtml(nombre: string, vivienda: string, idioma: 'es' | 'en') {
 
       <p style="margin:0 0 16px">${t.greeting(nombre)}</p>
       <p style="margin:0 0 16px;line-height:1.6">${t.body}</p>
-      <p style="margin:0 0 32px;color:#666;font-size:14px"><strong>${vivienda}</strong></p>
+      <p style="margin:0 0 32px;line-height:1.6">${t.body2}</p>
 
       <p style="margin:0 0 12px;line-height:1.6;font-size:14px;color:#444">${t.footer}</p>
       <div style="margin-bottom:32px">
@@ -126,7 +128,7 @@ serve(async (req) => {
     ),
     sendEmail(
       email,
-      t.subject(nombre),
+      t.subject(),
       buildLeadHtml(nombre, vivienda, lang),
     ),
   ])
