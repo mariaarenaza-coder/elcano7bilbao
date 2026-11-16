@@ -58,6 +58,8 @@ Ninguno — web en producción.
 - [x] Política de privacidad RGPD (ES + EN)
 - [x] Imágenes reales: fachada, Plaza Moyua, portal (optimizadas a ~500KB)
 - [x] Deploy en Vercel producción
+- [x] Nº de dormitorios en el listado de características de cada residencia (2026-11-16)
+- [x] Email de confirmación al lead (`notify-lead`, v7) sin la frase de visitas en junio (2026-11-16). OJO: los cambios en `supabase/functions/` NO se despliegan con git push; hay que hacer `supabase functions deploy notify-lead --project-ref omqepmgfrpndpquluwrf`
 - [x] Dominio propio `elcano7bilbao.com` activo
 
 ## Deuda técnica
